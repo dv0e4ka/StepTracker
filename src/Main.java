@@ -31,6 +31,7 @@ public class Main {
                 System.out.println("Введите номер мясяца, статистику которого требуется распечать, от 0 до 11, где 0 - январь, а 11 - декабрь");
                 int monthNumber = scanner.nextInt();
                 while (monthNumber < 0 || monthNumber > 11){
+                    System.out.println("Введите, пожалуйста, корректный номер мясяца, статистику которого требуется распечать, от 0 до 11, где 0 - январь, а 11 - декабрь");
                     monthNumber = scanner.nextInt();
                 }
                 stepTracker.printStat(monthNumber);
@@ -54,11 +55,9 @@ public class Main {
         }
 
         System.out.println("Программа завершена");
+        scanner.close();
     }
     private static void printMenu() {
-        System.out.println("1 - ввести количество шагов за определённый день");
-        System.out.println("2 - напечатать статистику за месяц");
-        System.out.println("3 - изменить цель по количеству шагов за день");
-        System.out.println("0 - чтобы завершить программу");
+        System.out.println("1 - ввести количество шагов за определённый день\n2 - напечатать статистику за месяц\n3 - изменить цель по количеству шагов за день\n0 - чтобы завершить программу");
     }
 }
